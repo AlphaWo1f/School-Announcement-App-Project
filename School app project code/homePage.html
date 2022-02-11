@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+
+
+    <!--Header-->
+    <h1 style="text-align: center;">Welcome to the My Announcements App!</h1>
+
+    <h2 style="text-align: center">Today is the</h2>
+    <h3 style="text-align: center">
+        <script> document.write(new Date().toLocaleDateString()); </script>
+    </3>
+
+
+
+
+    <!--Buttons that will redirect to the webpage they want-->
+    <!--Location.href allows for the user to be redirected to the link that is connected-->
+    <div style="text-align: center;">
+        <input type="button" onclick="location.href='teacherLogin.html';" value="Teacher announcement page" />
+        <input type="button" onclick="location.href='studentAnnouncement.html';" value="Student announcement search page" />
+        <br>
+        <input type="button" onclick="location.href='https://www.peelschools.org/schools/northpark/Pages/default.aspx';" value="North park website" />
+        <input type="button" onclick="location.href='https://twitter.com/NorthParkSSca';" value="North park twitter" />
+        <input type="button" onclick="location.href='https://www.instagram.com/northparkss/';" value="North park Instagram" />
+        <br>
+        <input type="button" onclick="location.href='https://twitter.com/regionofpeel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor';" value="Peel twitter" />
+        <input type="button" onclick="location.href='https://www.instagram.com/peelschools/';" value="Peel Instagram" />
+    </div>
+
+
+
+<style>
+    input {
+        display: inline-block;
+        background-color: #D66CEB;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 14px;
+        padding: 20px;
+        width: 300px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      input span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      input span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      input:hover {
+        background-color: #f7c2f9;
+      }
+      input:hover span {
+        padding-right: 25px;
+      }
+      input:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+    body{
+        background: #CAF4F4
+    }
+</style>
+
+</body>
+</html>

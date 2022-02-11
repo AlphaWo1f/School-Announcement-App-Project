@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Script tag to link the html page to the javascipt page-->
+  <script src="studentAnnouncement.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student announcement searc page</title>
+</head>
+
+<body>
+  <!--Headertag to display the welcome message-->
+  <h1 style="text-align: center;">Welcome to the Student Announcement search page!</h1>
+
+
+  <!--Announcement search area-->
+  <h2 style="text-align:center;"> Search for an announcement here:</h2>
+
+  <!--Grade selection-->
+  <div style="text-align: center;" class="container">
+    <label style="font-size: 20px;" for="htmlSgrades">Select the grades applicable</label>
+    <br>
+    <br>
+    <!--Checkboxes for students to select for the grade they want the announcement to include-->
+    <!--using input type=checkbox and giving it an id so that you can refer to it in the JS code-->
+    <input type="checkbox" id="htmlSGrade9"> Grade 9</input>
+    <input type="checkbox" id="htmlSGrade10"> Grade 10</input>
+    <input type="checkbox" id="htmlSGrade11"> Grade 11</input>
+    <input type="checkbox" id="htmlSGrade12"> Grade 12</input>
+    <br>
+    <br>
+  </div>
+
+  <!--Club selection-->
+  <div style="text-align: center;">
+    <!--Label tag so that there is a mini title over the dropdown list-->
+    <label style="font-size: 20px;" for="htmlSClubsList">Select your club:</label>
+    <!--creating drop down list using the <select> tag-->
+    <select id="htmlSClubs">
+      <!--drop down list for students to selecrt for the club they want want the announcement to incldue using <option> Tag-->
+      <option value="Hack Club">Hack Club</option>
+      <option value="DECA">DEAC</option>
+      <option value="HOSA">Hosa</option>
+      <option value="ModelUN">Model UN</option>
+      <option value="Basketball Team">Basketball Team</option>
+      <option value="Baseball Team">Baseball Team</option>
+      <option value="Art Club">Art Club</option>
+      <option value="Robotics Club">Robotics Club</option>
+      <option value="Music Club">Music Club</option>
+      <option value="Soccer Team">Soccer Team</option>
+      <option value="All Clubs">All Clubs</option>
+    </select>
+    <br>
+    <br>
+  </div>
+
+  <!--Gender Selection-->
+  <div style="text-align: center;">
+    <label style="font-size: 20px;" for="htmlSGender">Select the genders applicable</label>
+    <br>
+    <br>
+    <!--Checkbox for students to select the gender they want the announcement to include-->
+    <input type="checkbox" id="htmlSMale"> Male</input>
+    <input type="checkbox" id="htmlSFemale"> Female</input>
+  </div>
+
+  <!--Submit button-->
+  <div style="text-align: center;">
+    <br>
+    <!--<a> tag so that it takes user to the results page-->
+      <a = href="studentResultsPage.html">
+        <!--submit button for user, it will run the submit function in the JS-->
+        <button id="htmlSSubmit" class="submit"  onclick="studentSubmitbutton()">Submit</button>
+      </a>
+      <button id="htmlSReset" class="reset" onclick="studentResetbutton()">Reset All</button>
+  </div>
+</body>
+
+<style>
+  body{
+    background-color: #FDE0D9;
+  }
+  button {
+        display: inline-block;
+        background-color: #D66CEB;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 14px;
+        padding: 20px;
+        width: 150px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #f7c2f9;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+</style>
+
+</html>
+
+
+

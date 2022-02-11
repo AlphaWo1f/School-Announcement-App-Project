@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--linking html to js-->
+  <script src="teacherAnnouncement.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher announcement page</title>
+</head>
+<!--using onload to run the function as the page loads up-->
+<body onload="getExistingAnnouncements()">
+  <h1 style="text-align: center;">Welcome to the Teacher Announcement page!</h1>
+
+
+  <!--Announcement creator area-->
+  <h2 style="text-align:center;">Create your announcement here:</h2>
+
+  <!--Grade selection-->
+  <div style="text-align: center;" class="container">
+    <label style="font-size: 20px;" for="htmlTgrades">Select the grades applicable</label>
+    <br>
+    <br>
+    <!--Check boxes for teacher to choose grades-->
+    <!--created checkbox by using <input> tag and type=Checkbox, and giving it an id so it can be used in the JS Code-->
+    <input type="checkbox" id="htmlTGrade9"> Grade 9
+    <input type="checkbox" id="htmlTGrade10"> Grade 10
+    <input type="checkbox" id="htmlTGrade11"> Grade 11
+    <input type="checkbox" id="htmlTGrade12"> Grade 12
+    <br>
+    <br>
+  </div>
+
+  <!--Club selection-->
+  <div style="text-align: center;">
+    <label style="font-size: 20px;" for="htmlTClubsList">Select your club:</label>
+    <!--drop down list using <select> tag, giving id to use in JS-->
+    <select id="htmlTClubs">
+      <!--Drop down menu for teachers to select their club-->
+      <!--<option> tag to give user options to select from-->
+      <option value="Hack Club">Hack Club</option>
+      <option value="DECA">DEAC</option>
+      <option value="HOSA">Hosa</option>
+      <option value="ModelUN">Model UN</option>
+      <option value="Basketball Team">Basketball Team</option>
+      <option value="Baseball Team">Baseball Team</option>
+      <option value="Art Club">Art Club</option>
+      <option value="Robotics Club">Robotics Club</option>
+      <option value="Music Club">Music Club</option>
+      <option value="Soccer Team">Soccer Team</option>
+      <option value="All Clubs">All Clubs</option>
+
+    </select>
+    <br>
+    <br>
+  </div>
+
+  <!--Gender Selection-->
+  <div style="text-align: center;">
+    <label style="font-size: 20px;" for="htmlTGender">Select the genders applicable</label>
+    <br>
+    <br>
+    <!--Check boxes for teachers to choose the gender they want-->
+    <input type="checkbox" id="htmlTMale"> Male</input>
+    <input type="checkbox" id="htmlTFemale"> Female</input>
+    <br>
+    <br>
+  </div>
+
+  <!--Additional Details-->
+  <div style="text-align: center;">
+    <label style="font-size: 20px;" id=htmlTAdditionalDetails> List any additional details</label>
+    <!--Text area for teacher to submit any additional information-->
+    <textarea type="text" id="htmlTDetails" width="200px"></textarea>
+  </div>
+
+  <div style="text-align: center;">
+    <label>Date: </label>
+    <input type="date" id="htmlTDate">
+  </div>
+
+  <!--Submit button-->
+  <div style="text-align: center;">
+    <br>
+    <br>
+    <!--Submit button for teahcers to post their announcement-->
+    <button onClick="teacherSubmitbutton()" id="htmlTSubmit" class="submit">Submit</button>
+    <!--Reset button for teachers to delete everything they selected-->
+    <button id="htmlTReset" class="reset">Reset All</button>
+  </div>
+
+
+</body>
+<style>
+  body{
+    background-color: #FFF2CC;
+  }
+  button {
+        display: inline-block;
+        background-color: #D66CEB;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 14px;
+        padding: 20px;
+        width: 150px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #f7c2f9;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+</style>
+
+</html>

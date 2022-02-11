@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- linking html to JS -->
+    <script src="studentResultsPage.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student result page</title>
+</head>
+<!-- onload function to run the function as the page loads up-->
+<body onload ="displayResults()" onload="viewAnnouncement()">
+    <!--<header> tags to display messages-->
+    <h1>Student's Announcement Result Page!</h1>
+    <h3>Here you will see all announcements that match the options you selected earlier.</h3>
+
+    <a = href="studentAnnouncement.html">
+        <button>Search Page</button>
+    </a>
+    <a = href="homePage.html">
+        <button>Home Page</button>
+    </a>
+
+
+    <!-- paragraph tags to run a function from the JS file when the tag is clicked using-->
+    <!-- onlclick="___", and giving id to refer to in JS-->
+    <p id="htmlResultsArea1">Sorry, there are no matches</p>
+
+
+<!--style tag to center the tags-->
+<style>
+    p{
+        text-align: center;
+        font-size: 18px;
+    }
+    table{
+        border: 1px solid;
+    }
+    tr{
+        border: 1px solid;
+    }
+    body{
+        background: #CAEFD1;
+        text-align: center;
+    }
+    button {
+        display: inline-block;
+        background-color: #D66CEB;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 14px;
+        padding: 20px;
+        width: 150px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #f7c2f9;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+</style>
+</body>
+</html>
